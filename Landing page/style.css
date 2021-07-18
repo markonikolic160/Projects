@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Popins", sans-serif ;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(cake.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 70px;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 750;
+    text-decoration: none;
+    letter-spacing: 2px;
+    cursor:auto;
+}
+
+header .nav {
+    position: relative;
+    display: flex;
+}
+
+header .nav li {
+    list-style: none;
+}
+
+header .nav li a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+header .nav li a:hover{
+    color:burlywood
+}
+
+.content{
+    max-width: 300px; 
+}
+
+.content .contentBox h2{
+    font-size: 2em;
+    color: #fff;
+    line-height: 1em;
+}
+
+.content .contentBox p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0;
+    line-height: 1.5em;
+}
+
+.content .contentBox a{
+    display: inline-block;
+    padding: 10px 30px;
+    background: rgb(23, 205, 230);
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin-top: 50px;
+}
+
+.socNet{
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    display: flex;
+    
+}
+
+.socNet li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socNet li a {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    filter: invert(1);
+    transform: scale(1);
+}
+
+@media (max-width: 990px)
+{
+    header{
+        padding: 15px 40px;
+    }
+    section{
+        padding: 40px;
+    }
+    .content .contentBox h2 {
+        font-size: 2.5em;
+    }
+    .contentBox .contentBox p {
+        font-size: 1em;
+    }
+    header .nav {
+        position: fixed;
+        top: 0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        background: rgb(23, 205, 230);
+        z-index: 10;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .nav.active{
+        display: flex;
+    }
+    header .nav li a{
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .menuToggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 11;
+    }
+    .menuToggle.active {
+        background: url(close.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+}
